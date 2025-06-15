@@ -1,13 +1,8 @@
 import { ButtonProps } from "@/interface";
 
-interface ButtonProps {
-  buttonLabel: string
-  buttonSize?: string
-  buttonBackgroundColor?: 'red' | 'blue' | 'orange' | 'green'
-  action?: () => void
-}
 
-const Button = ({ buttonLabel, buttonSize, buttonBackgroundColor, action }: ButtonProps) => {
+
+const Button = ({ buttonLabel,  buttonBackgroundColor, action }: ButtonProps) => {
 
   const backgroundColorClass = buttonBackgroundColor ? {
     red: 'bg-red-500',
@@ -17,7 +12,7 @@ const Button = ({ buttonLabel, buttonSize, buttonBackgroundColor, action }: Butt
   }[buttonBackgroundColor] : 'bg-slate-500'
 
   return (
-    <button onClick={action} className={`${backgroundColorClass} ${buttonSize} px-6 py-2 text-sm font-semibold rounded-lg hover:${backgroundColorClass}/50 transition duration-300 text-white`}>
+    <button onClick={action} className={`${backgroundColorClass}  px-6 py-2 text-sm font-semibold rounded-lg hover:${backgroundColorClass}/50 transition duration-300 text-white`}>
       {buttonLabel}
     </button>
   )

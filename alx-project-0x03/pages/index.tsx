@@ -2,12 +2,9 @@ import Button from "@/components/common/Button";
 import { useRouter } from "next/router";
 import { PageRouteProps } from "@/interface";
 
-// باقي الكود كما هو
 
 
-interface PageRouteProps {
-  pageRoute: string;
-}
+
 
 export default function Home() {
   const router = useRouter();
